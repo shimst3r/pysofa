@@ -1,0 +1,35 @@
+name: Test
+
+on: [ pull_request ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+
+      - name: Check code formatting with black
+        run: |
+          pip install black
+          python -m black --check pysofa/ tests/
+      - name: Lint code with flake8
+        run: |
+          pip install flake8
+          python -m flake8 pysofa/ tests/
+      - name: Check import order with isort
+        run: |
+          pip install isort
+          python -m isort --check pysofa/ tests/
+      - name: Lint code with mypy
+        run: |
+          pip install mypy
+          python -m mypy pysofa/ tests/
+      - name: Run test suite with pytest
+        run: |
+          pip install pytest
+          python -m pytest tests/
