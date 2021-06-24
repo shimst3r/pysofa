@@ -1,0 +1,23 @@
+[mypy]
+
+[mypy-pytest]
+ignore_missing_imports = true
+
+[tool.poetry]
+name = "pysofa"
+version = "1.0.0"
+description = ""
+authors = ["shimst3r <shimst3r@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+black = "^21.6b0"
+flake8 = "^3.9.2"
+mypy = "^0.910"
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
