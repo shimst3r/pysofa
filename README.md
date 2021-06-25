@@ -18,6 +18,8 @@ sofascore is available on PyPI, so you can install it easily via
 pip install sofascore
 ```
 
+For manual installation, check the [Release](https://github.com/shimst3r/sofascore/releases/tag/v1.0.0) page.
+
 ## Pre-Commit Hooks
 
 The project comes with a [.pre-commit-config.yaml](./.pre-commit-config.yaml) file for configuring pre-commit hooks via [pre-commit](https://pre-commit.com). To install the hooks, install pre-commit on your system (see the [installation guide](https://pre-commit.com/#install)) and run
