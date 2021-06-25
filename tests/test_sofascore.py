@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-import pysofa
-from pysofa import Catecholamine, Condition
+import sofascore
+from sofascore import Catecholamine, Condition
 
 
 def test_version():
-    assert pysofa.__version__ == "1.0.0"
+    assert sofascore.__version__ == "1.0.0"
 
 
 @pytest.mark.parametrize(
@@ -28,7 +28,7 @@ def test_version():
     ],
 )
 def test_compute_score(condition, score):
-    assert score == pysofa.compute_score(condition=condition)
+    assert score == sofascore.compute(condition=condition)
 
 
 @pytest.mark.parametrize(
@@ -47,7 +47,7 @@ def test_compute_score(condition, score):
     ],
 )
 def test_compute_score_for_cardiovascular_system(map, catecholamine, score):
-    assert score == pysofa.compute_score_for_cardiovascular_system(
+    assert score == sofascore.compute_score_for_cardiovascular_system(
         mean_arterial_pressure=map, catecholamine=catecholamine
     )
 
@@ -68,7 +68,7 @@ def test_compute_score_for_cardiovascular_system(map, catecholamine, score):
     ],
 )
 def test_compute_score_for_coagulation(platelets, score):
-    assert score == pysofa.compute_score_for_coagulation(platelets_count=platelets)
+    assert score == sofascore.compute_score_for_coagulation(platelets_count=platelets)
 
 
 @pytest.mark.parametrize(
@@ -87,7 +87,7 @@ def test_compute_score_for_coagulation(platelets, score):
     ],
 )
 def test_compute_score_for_kidneys(creatinine, score):
-    assert score == pysofa.compute_score_for_kidneys(creatinine_level=creatinine)
+    assert score == sofascore.compute_score_for_kidneys(creatinine_level=creatinine)
 
 
 @pytest.mark.parametrize(
@@ -106,7 +106,7 @@ def test_compute_score_for_kidneys(creatinine, score):
     ],
 )
 def test_compute_score_for_liver(bilirubin, score):
-    assert score == pysofa.compute_score_for_liver(bilirubin_level=bilirubin)
+    assert score == sofascore.compute_score_for_liver(bilirubin_level=bilirubin)
 
 
 @pytest.mark.parametrize(
@@ -131,7 +131,7 @@ def test_compute_score_for_liver(bilirubin, score):
     ],
 )
 def test_compute_score_for_nervous_system(coma_scale, score):
-    assert score == pysofa.compute_score_for_nervous_system(
+    assert score == sofascore.compute_score_for_nervous_system(
         glasgow_coma_scale=coma_scale
     )
 
@@ -152,6 +152,6 @@ def test_compute_score_for_nervous_system(coma_scale, score):
     ],
 )
 def test_compute_score_for_respiratory_system(pressure, ventilation, score):
-    assert score == pysofa.compute_score_for_respiratory_system(
+    assert score == sofascore.compute_score_for_respiratory_system(
         partial_pressure_of_oxygen=pressure, is_mechanically_ventilated=ventilation
     )

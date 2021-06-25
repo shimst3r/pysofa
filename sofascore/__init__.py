@@ -14,7 +14,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-pysofa computes the Sepsis-related Organ Failure Assessment (SOFA) score
+sofascore computes the Sepsis-related Organ Failure Assessment (SOFA) score
 according to Singer et al.:
     https://doi.org/10.1001%2Fjama.2016.0287
 """
@@ -40,7 +40,7 @@ Condition = namedtuple(
 )
 
 
-def compute_score(condition: Condition) -> int:
+def compute(condition: Condition) -> int:
     cvs_score = compute_score_for_cardiovascular_system(
         mean_arterial_pressure=condition.mean_arterial_pressure,
         catecholamine=condition.catecholamine,
