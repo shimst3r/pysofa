@@ -1,10 +1,10 @@
-# PySOFA
+# sofascore
 
 1. [License](#license)
 
 ---
 
-[PySOFA](https://www.github.com/shimst3r/pysofa) is a Python library for computing the [SOFA score](https://en.wikipedia.org/wiki/SOFA_score) according to [Singer et al.](https://doi.org/10.1001%2Fjama.2016.0287).
+[sofascore](https://www.github.com/shimst3r/sofascore) is a Python library for computing the [SOFA score](https://en.wikipedia.org/wiki/SOFA_score) according to [Singer et al.](https://doi.org/10.1001%2Fjama.2016.0287).
 
 ## License
 
