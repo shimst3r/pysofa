@@ -1,10 +1,31 @@
 # sofascore
 
-1. [License](#license)
+[sofascore](https://www.github.com/shimst3r/sofascore) is a Python package for computing the [SOFA score](https://en.wikipedia.org/wiki/SOFA_score) according to [Singer et al.](https://doi.org/10.1001%2Fjama.2016.0287)
 
----
+## Use Cases
 
-[sofascore](https://www.github.com/shimst3r/sofascore) is a Python library for computing the [SOFA score](https://en.wikipedia.org/wiki/SOFA_score) according to [Singer et al.](https://doi.org/10.1001%2Fjama.2016.0287).
+Use sofascore wherever you are interested in computing the SOFA score, i.a.
+
+- Clinical Decision Support Systems
+- Research
+- Smart Medical Devices (as sofascore only uses the standard library, it can be easily adapted to [MicroPython](https://micropython.org) based microcontrollers)
+
+## Installation
+
+sofascore is available on PyPI, so you can install it easily via
+
+```shell
+pip install sofascore
+```
+
+## Pre-Commit Hooks
+
+The project comes with a [.pre-commit-config.yaml](./.pre-commit-config.yaml) file for configuring pre-commit hooks via [pre-commit](https://pre-commit.com). To install the hooks, install pre-commit on your system (see the [installation guide](https://pre-commit.com/#install)) and run
+
+```shell
+pre-commit install
+pre-commit run -a
+```
 
 ## License
 
