@@ -16,19 +16,19 @@ jobs:
       - name: Check code formatting with black
         run: |
           pip install black
-          python -m black --check pysofa/ tests/
+          python -m black --check sofascore/ tests/
       - name: Lint code with flake8
         run: |
           pip install flake8
-          python -m flake8 pysofa/ tests/
+          python -m flake8 sofascore/ tests/
       - name: Check import order with isort
         run: |
           pip install isort
-          python -m isort --check pysofa/ tests/
+          python -m isort --check sofascore/ tests/
       - name: Lint code with mypy
         run: |
           pip install mypy
-          python -m mypy pysofa/ tests/
+          python -m mypy sofascore/ tests/
       - name: Run test suite with pytest
         run: |
           pip install pytest
