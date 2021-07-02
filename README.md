@@ -7,6 +7,7 @@
 Use sofascore wherever you are interested in computing the SOFA score, i.a.
 
 - Clinical Decision Support Systems
+- Education
 - Research
 - Smart Medical Devices (as sofascore only uses the standard library, it can be easily adapted to [MicroPython](https://micropython.org) based microcontrollers)
 
@@ -19,6 +20,13 @@ pip install sofascore
 ```
 
 For manual installation, check the [Release](https://github.com/shimst3r/sofascore/releases/tag/v1.0.0) page.
+
+## Feature Roadmap
+
+The following things are likely to be implemented next:
+
+- Adapters for relevant datasets (e.g. MIMIC-based datasets).
+- Non-standard units for relevant sub-scores.
 
 ## Pre-Commit Hooks
 
