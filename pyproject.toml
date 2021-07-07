@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sofascore"
-version = "1.0.0"
+version = "1.1.0"
 description = ""
 authors = ["shimst3r <shimst3r@gmail.com>"]
 
