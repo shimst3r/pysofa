@@ -79,6 +79,6 @@ class MimicExtract(Adapter):
         is_mechanically_ventilated = self.vent.loc[patient_id].values[time][0]
         tail[0] *= 1000
 
-        return sofascore.Condition(
+        return sofascore.Condition(  # type: ignore
             mean_arterial_pressure, None, *tail, is_mechanically_ventilated
         )

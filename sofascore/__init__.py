@@ -18,26 +18,25 @@ sofascore computes the Sepsis-related Organ Failure Assessment (SOFA) score
 according to Singer et al.:
     https://doi.org/10.1001%2Fjama.2016.0287
 """
-from collections import namedtuple
-from typing import Optional
+from typing import NamedTuple, Optional
 
 __version__ = "1.0.0"
 
 
-Catecholamine = namedtuple("Catecholamine", ["name", "dosage"])
-Condition = namedtuple(
-    "Condition",
-    [
-        "mean_arterial_pressure",
-        "catecholamine",
-        "platelets_count",
-        "creatinine_level",
-        "bilirubin_level",
-        "glasgow_coma_scale",
-        "partial_pressure_of_oxygen",
-        "is_mechanically_ventilated",
-    ],
-)
+class Catecholamine(NamedTuple):
+    name: str
+    dosage: float
+
+
+class Condition(NamedTuple):
+    mean_arterial_pressure: float
+    catecholamine: Optional[Catecholamine]
+    platelets_count: int
+    creatinine_level: float
+    bilirubin_level: float
+    glasgow_coma_scale: int
+    partial_pressure_of_oxygen: float
+    is_mechanically_ventilated: bool
 
 
 def compute(condition: Condition) -> int:
