@@ -25,6 +25,21 @@ pip install sofascore
 
 For manual installation, check the [Release](https://github.com/shimst3r/sofascore/releases/tag/v1.0.0) page.
 
+## Adapter Usage
+
+The easiest way to use sofascore is to use an existing adapter from the [`sofascore.adapters`](./sofascore/adapters.py) module, e.g. for the [MIMIC-Extract dataset](https://arxiv.org/abs/1907.08322):
+
+```python
+>>> from sofascore.adapters import MimicExtract
+>>> HDF_PATH = "path/to/mimic-extract.hdf5"
+>>> data = MimicExtract(HDF_PATH)
+>>> data.compute_sofa_score(patient_id=3, time=0)
+4
+```
+
+Each adapter implements a custom `Adapter._condition` method that is based on the
+patient's ID and the relevant point in time.
+
 ## Feature Roadmap
 
 The following things are likely to be implemented next:
