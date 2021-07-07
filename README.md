@@ -2,6 +2,10 @@
 
 [sofascore](https://www.github.com/shimst3r/sofascore) is a Python package for computing the [SOFA score](https://en.wikipedia.org/wiki/SOFA_score) according to [Singer et al.](https://doi.org/10.1001%2Fjama.2016.0287)
 
+## Disclaimer
+
+This library is only concerned with the SOFA score as defined in the previous link and is unrelated to the sports app with the same name.
+
 ## Use Cases
 
 Use sofascore wherever you are interested in computing the SOFA score, i.a.
