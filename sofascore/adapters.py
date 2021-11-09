@@ -82,3 +82,10 @@ class MimicExtract(Adapter):
         return sofascore.Condition(  # type: ignore
             mean_arterial_pressure, None, *tail, is_mechanically_ventilated
         )
+
+    def compute_sofa_score_all_times(self, patient_id) -> pd.Series:
+        num_entries = self.vitals_labs.loc[patient_id].values.shape[0]
+        scores = pd.Series(range(num_entries))
+        scores = scores.apply(lambda t: self.compute_sofa_score(patient_id, t))
+
+        return scores
