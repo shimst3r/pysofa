@@ -6,7 +6,7 @@ authors = ["shimst3r <shimst3r@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-pandas = "^1.3.0"
+pandas = "^1.3"
 tables = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
