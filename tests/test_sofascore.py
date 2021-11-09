@@ -6,7 +6,7 @@ from sofascore import Catecholamine, Condition
 
 
 def test_version():
-    assert sofascore.__version__ == "1.1.0"
+    assert sofascore.__version__ == "1.2.0"
 
 
 @pytest.mark.parametrize(
